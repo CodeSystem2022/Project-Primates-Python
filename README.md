@@ -10,8 +10,8 @@
 <div style="overflow-x: auto; overflow-y: hidden;">
   <table>
     <tr>
-      <th>JScript</th>
-      <th> <img src="https://user-images.githubusercontent.com/111594677/232659377-a34daabe-5216-44b3-a4c6-02e880d21312.png" alt="imagen" width="30"> </th>
+      <th>Python</th>
+      <th> <img src="https://user-images.githubusercontent.com/111594677/232658922-1758a4c2-aeb5-4e1d-8a24-ed18d30e2265.png" alt="imagen" width="30"> </th>
     </tr>
   </table>
 </div>
