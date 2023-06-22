@@ -97,9 +97,11 @@ class HealthPersonal:
                f'Experiencia: {self._experience} años\nEducación: {self._education}\n' \
                f'Idiomas: {self._languages}\nTarifa de consulta: ${self._consultation_fee}\n' \
                f'Disponibilidad: {self._availability}\n' \
- \
- \
-    # Parte de pruebas.
+
+
+# Parte de pruebas.
+
+
 if __name__ == '__main__':
     doctor = HealthPersonal('Nico', 'Sgandurra', 21, 'Cirujano', 'High', 'Nico.Sg@gmail.com',
                             '2604667189', '3 De Febrero 880', 10,
