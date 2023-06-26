@@ -4,11 +4,12 @@ from PyQt5.QtGui import QPalette, QColor, QFont, QPainter
 from PyQt5.QtCore import Qt
 
 
-class HealthHistoryWindow(QWidget):
+class StockMinderWindow(QWidget):
     def __init__(self):
         super().__init__()
 
         # Configura el tema oscuro
+        self.table = None
         dark_palette = QPalette()
         dark_palette.setColor(QPalette.Window, QColor('#bbdea7'))
         dark_palette.setColor(QPalette.WindowText, QColor(255, 255, 255))
@@ -25,7 +26,7 @@ class HealthHistoryWindow(QWidget):
         dark_palette.setColor(QPalette.HighlightedText, QColor(0, 0, 0))
 
         # Configura el título de la ventana en la esquina superior izquierda
-        self.title_label = QLabel('Inventory', self)
+        self.title_label = QLabel('StockMinder', self)
         self.title_label.move(10, 10)
         self.title_label.setStyleSheet("color: rgb(0, 0, 0)")
         self.title_label.setFont(QFont("Arial", 12, QFont.Bold))
@@ -41,7 +42,7 @@ class HealthHistoryWindow(QWidget):
         self.button_label.setFixedWidth(110)
         self.button_label.mousePressEvent = self.on_button_clicked
 
-        self.setWindowTitle('HealthHistory')
+        self.setWindowTitle('StockMinder')
         self.setGeometry(400, 400, 1200, 800)
         self.setPalette(dark_palette)
         self.setAutoFillBackground(True)
@@ -96,6 +97,6 @@ class HealthHistoryWindow(QWidget):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    window = HealthHistoryWindow()
+    window = StockMinderWindow()
     window.show()
     sys.exit(app.exec())
