@@ -13,6 +13,14 @@
       <th>Python</th>
       <th> <img src="https://user-images.githubusercontent.com/111594677/232658922-1758a4c2-aeb5-4e1d-8a24-ed18d30e2265.png" alt="imagen" width="30"> </th>
     </tr>
+    <tr>
+      <th>HTML5</th>
+      <th> <img src="https://cdn-icons-png.flaticon.com/512/226/226269.png?w=826&t=st=1687745217~exp=1687745817~hmac=bd17e135155303394072d83f3e4c65320f5cdccb76dbdddebbde353b375b95bd" alt="imagen" width="30"> </th>
+    </tr>
+    <tr>
+      <th>CSS</th>
+      <th> <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png?w=826&t=st=1687745373~exp=1687745973~hmac=54ae45c592aad172a0731f9e49826b9b9254ffaf3511595aac252576a958c97a" alt="imagen" width="30"> </th>
+    </tr>
   </table>
 </div>
 
