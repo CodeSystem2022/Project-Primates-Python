@@ -50,7 +50,7 @@
     </tr>
     <tr>
       <th>5</th>
-      <th>Serna, Damián</th>
+      <th>Reinoso, Agustin</th>
     </tr>
     <tr>
       <th>6</th>
