@@ -25,6 +25,10 @@
       <th>PostgreSQL</th>
       <th> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1985px-Postgresql_elephant.svg.png" alt="imagen" width="30"> </th>
     </tr>
+    <tr>
+      <th>Django</th>
+      <th> <img src="https://img.stackshare.io/service/994/4aGjtNQv.png" alt="imagen" width="30"> </th>
+    </tr>
   </table>
 </div>
 
