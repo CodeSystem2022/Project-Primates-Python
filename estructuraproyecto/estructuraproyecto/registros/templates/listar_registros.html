@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Historial Medico</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 offset-md-4">
+                <h1 class="display-6 fw-bold">Historial Medico</h1>
+                <form action="{% url 'crear_registros' %}" method="POST" class="card card-body bg-secondary">
+                    {% csrf_token %}
+                    <label for="Nombre">Ingrese el nombre</label>
+                    <input type="text" name="Registro" placeholder="Escribe un nombre" class="form-control mb-2">
+                    <label for="descripcion">Ingrese la observacion</label>
+                    <textarea name="descripcion" rows="5" placeholder="Escriba la observacion" class="form-control mb-2"></textarea>
+                    <button class="btn btn-success">Guardar</button>
+                </form>
+
+                {% if registros %}
+                <div class="list-group">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for Registro in registros %}
+                            <tr>
+                                <td>{{ Registro.nombre }}</td>
+                                <td>{{ Registro.descripcion }}</td>
+                                <td>
+                                    <form action="{% url 'editar_registros' Registro.id %}" method="POST">
+                                        {% csrf_token %}
+                                        <button class="btn btn-warning">Editar</button>
+                                    </form>
+                                    <form action="{% url 'eliminar_registros' Registro.id %}" method="POST">
+                                        {% csrf_token %}
+                                        <button class="btn btn-danger">Eliminar</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="3">No hay historial</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% else %}
+                <h1 class="text-light">No hay historial</h1>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
