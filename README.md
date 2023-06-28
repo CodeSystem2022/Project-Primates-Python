@@ -22,8 +22,8 @@
       <th> <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png?w=826&t=st=1687745373~exp=1687745973~hmac=54ae45c592aad172a0731f9e49826b9b9254ffaf3511595aac252576a958c97a" alt="imagen" width="30"> </th>
     </tr>
     <tr>
-      <th>MySQL</th>
-      <th> <img src="https://d1.awsstatic.com/asset-repository/products/amazon-rds/1024px-MySQL.ff87215b43fd7292af172e2a5d9b844217262571.png" alt="imagen" width="30"> </th>
+      <th>PostgreSQL</th>
+      <th> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1985px-Postgresql_elephant.svg.png" alt="imagen" width="30"> </th>
     </tr>
   </table>
 </div>
