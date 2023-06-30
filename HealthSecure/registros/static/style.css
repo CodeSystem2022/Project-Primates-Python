@@ -17,18 +17,25 @@ body {
     border-collapse: collapse;
      width: 30%;
      text-align: center;
+    margin-bottom: 60px;
 }
 
 .tablaIntegrates tr th{
     padding: 4px;
+    font-family: 'Nunito Sans', Italic, sans-serif;
+    font-weight: 700;
+
 }
+
 .titleTable{
     background-color: black;
+    font-family: 'Nunito Sans', Italic, sans-serif;
+    font-weight: 700;
     color: #e81557;
 }
 
 tr:nth-child(even){
-    background-color: #bdbdbd;
+    background-color: #e3e3e3;
 }
 
 .navBar {
@@ -75,14 +82,17 @@ tr:nth-child(even){
 }
 .textContainer p {
     font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Nunito Sans', Italic, sans-serif;
+    font-weight: 400;
+    font-style: italic;
     color: rgb(66, 66, 66);
-    margin-bottom: 15px;
+    margin-bottom: 60px;
     text-align: center;
 }
 .textContainer ul {
     font-size: 15px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Nunito Sans', Italic, sans-serif;
+    font-weight: 200;
     color: rgb(66, 66, 66);
     margin-bottom: 15px;
     text-align: center;
@@ -108,9 +118,10 @@ tr:nth-child(even){
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-    font-size: 35px;
+    font-family: 'Nunito Sans', ItalicC, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 40px;
     text-transform: uppercase;
     cursor: pointer;
     position: absolute;
@@ -143,7 +154,9 @@ footer {
     background-color: black;
 }
 footer h6 {
-    font: "Trebuchet MS";
+    font-family: 'Nunito Sans', Italic, sans-serif;
+    font-weight: 400;
+    font-style: italic;
     font-size: 14px;
     color: #e81557;
 }
