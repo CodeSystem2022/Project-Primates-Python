@@ -6,33 +6,44 @@
     <meta charset="UTF-8">
     <title>Historial Medico</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="stylesheet" href="./static/main.css"/>
+    <link rel="shortcut icon" href="./static/Logotipo.png">
 </head>
-<body>
+<body class="image-background">
+    <nav class="navBar">
+        <img
+            src="static/IsoLogotipo.png"
+            alt=""
+        >
+    </nav>
+    <div class="decorativeBarTop">
+
+    </div>
+
     <div class="container">
         <div class="row">
             <div class="col-md-5 offset-md-4">
-                <h1 class="display-6 fw-bold">Historial Medico</h1>
+                <h1 class="title-boxes fw-bold">Historial Médico</h1>
                 <form action="{% url 'crear_registros' %}" method="POST" class="card card-body bg-secondary">
                     {% csrf_token %}
-                    <label for="Nombre">Ingrese el nombre</label>
-                    <input type="text" name="Registro" placeholder="Escribe un nombre" class="form-control mb-2">
-                    <label for="descripcion">Ingrese la observacion</label>
-                    <textarea name="descripcion" rows="5" placeholder="Escriba la observacion" class="form-control mb-2"></textarea>
+                    <label for="nombre">Ingrese el nombre:</label>
+                    <input type="text" name="nombre" placeholder="Escribe un nombre" class="form-control mb-2">
+                    <label for="descripcion">Ingrese la observación:</label>
+                    <textarea name="descripcion" rows="5" placeholder="Escriba la observación" class="form-control mb-2"></textarea>
                     <button class="btn btn-success">Guardar</button>
                 </form>
 
                 {% if registros %}
                 <div class="list-group">
                     <table class="table">
-                        <thead>
+                        <thead class="table-titles">
                             <tr>
                                 <th>Nombre</th>
                                 <th>Descripción</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="table-body">
                             {% for Registro in registros %}
                             <tr>
                                 <td>{{ Registro.nombre }}</td>
@@ -50,7 +61,7 @@
                             </tr>
                             {% empty %}
                             <tr>
-                                <td colspan="3">No hay historial</td>
+                                <td class="empty" colspan="3">No hay historial</td>
                             </tr>
                             {% endfor %}
                         </tbody>
@@ -62,5 +73,11 @@
             </div>
         </div>
     </div>
+    <footer>
+        <h6>
+            Grupo Primates. Tecnicatura Universitaria en Programación UTN.
+            2023.
+        </h6>
+    </footer>
 </body>
 </html>
