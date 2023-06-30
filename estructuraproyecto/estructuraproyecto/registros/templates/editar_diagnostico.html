@@ -7,12 +7,24 @@
   <title>EditarRegistros</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="shortcut icon" href="assets/Logotipo.png">
 
 </head>
-<body>
+<body class="image-background">
+        <nav class="navBar">
+                <img
+                    src="assets/IsoLogotipo.png"
+                    alt=""
+                />
+        </nav>
+        <div class="decorativeBarTop">
+
+        </div>
+
         <div class="container">
           <div class="col-md-4 offset-md-4">
-            <h1 class="display-6 fw-bold">Editar Diagnostico</h1>
+            <h1 class="title-boxes fw-bold">Editar Diagnóstico</h1>
             <form method="POST" class="card card-body bg-secondary">
                 {% csrf_token %}
                 {% for form in forms %}
@@ -24,8 +36,8 @@
                     id=""
                     placeholder="{{ form.label }}"
                     value="{{ form.value | default:'' }}"
-                    class="form-control mb-2
-                    />
+                    class="form-control mb-2"
+                    >
                 </div>
 
                 {% endfor %}
@@ -38,6 +50,11 @@
           </div>
         </div>
     </main>
-
+    <footer>
+        <h6>
+            Grupo Primates. Tecnicatura Universitaria en Programación UTN.
+            2023.
+        </h6>
+    </footer>
   </body>
 </html>
