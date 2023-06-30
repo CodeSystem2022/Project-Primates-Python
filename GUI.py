@@ -4,7 +4,7 @@ from PyQt5.QtGui import QPalette, QColor, QFont, QPainter
 from PyQt5.QtCore import Qt
 
 
-class StockMinderWindow(QWidget):
+class HealthSecureWindow(QWidget):
     def __init__(self):
         super().__init__()
 
@@ -26,13 +26,13 @@ class StockMinderWindow(QWidget):
         dark_palette.setColor(QPalette.HighlightedText, QColor(0, 0, 0))
 
         # Configura el título de la ventana en la esquina superior izquierda
-        self.title_label = QLabel('StockMinder', self)
+        self.title_label = QLabel('HealthSecure', self)
         self.title_label.move(10, 10)
         self.title_label.setStyleSheet("color: rgb(0, 0, 0)")
         self.title_label.setFont(QFont("Arial", 12, QFont.Bold))
 
         # Crea el botón pulsador
-        self.button_label = QLabel('Agregar\nproductos', self)
+        self.button_label = QLabel('Agregar\npacientes', self)
         self.button_label.move(5, 50)
         self.button_label.setStyleSheet(
             "background-color: #bbdea7; color: rgb('255, 255, 255'); padding: 5px; border-radius: 5px; cursor: pointer;"
@@ -42,7 +42,7 @@ class StockMinderWindow(QWidget):
         self.button_label.setFixedWidth(110)
         self.button_label.mousePressEvent = self.on_button_clicked
 
-        self.setWindowTitle('StockMinder')
+        self.setWindowTitle('HealthSecure')
         self.setGeometry(400, 400, 1200, 800)
         self.setPalette(dark_palette)
         self.setAutoFillBackground(True)
@@ -97,6 +97,6 @@ class StockMinderWindow(QWidget):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    window = StockMinderWindow()
+    window = HealthSecureWindow()
     window.show()
     sys.exit(app.exec())
