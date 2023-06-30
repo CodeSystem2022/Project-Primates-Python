@@ -20,16 +20,23 @@ body {
     margin-bottom: 60px;
 }
 
-.tablaIntegrates tr th{
+.tablaIntegrates thead{
     padding: 4px;
-    font-family: 'Nunito Sans', Italic, sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     font-weight: 700;
 
+
+}
+.tablaIntegrates tbody{
+    padding: 4px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-style: italic;
 }
 
 .titleTable{
     background-color: black;
-    font-family: 'Nunito Sans', Italic, sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     font-weight: 700;
     color: #e81557;
 }
