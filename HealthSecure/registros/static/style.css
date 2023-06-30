@@ -1,3 +1,6 @@
+::-webkit-scrollbar {
+    display: none;
+}
 * {
     padding: 0;
     margin: 0;
@@ -46,8 +49,8 @@ tr:nth-child(even){
 }
 
 .navBar {
-    width: 100%;
     height: 10%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,19 +59,9 @@ tr:nth-child(even){
 .navBar img {
     height: 100%;
     z-index: 1;
+    box-shadow: 0 0 35px black;
 }
 
-.decorativeBarBot {
-  height: 25px;
-  width: 100%;
-  background: linear-gradient(to top, #919191, #ddd);
-}
-
-.decorativeBarTop {
-  height: 30px;
-  width: 100%;
-  background: linear-gradient(to bottom, #919191, #ddd);
-}
 
 .mainSection {
     height: 85%;
@@ -79,6 +72,8 @@ tr:nth-child(even){
     flex-direction: column-reverse;
     background-color: #ddd;
 }
+
+
 .textContainer {
     width: 80%;
     height: 100%;
@@ -87,6 +82,8 @@ tr:nth-child(even){
     justify-content: center;
     flex-direction: column;
 }
+
+
 .textContainer p {
     font-size: 20px;
     font-family: 'Nunito Sans', Italic, sans-serif;
@@ -96,6 +93,8 @@ tr:nth-child(even){
     margin-bottom: 60px;
     text-align: center;
 }
+
+
 .textContainer ul {
     font-size: 15px;
     font-family: 'Nunito Sans', Italic, sans-serif;
@@ -104,10 +103,14 @@ tr:nth-child(even){
     margin-bottom: 15px;
     text-align: center;
 }
+
+
 .textContainer ul li {
     margin: 10px 0;
     list-style: none;
 }
+
+
 .buttonContainer {
     width: 100%;
     height: 100%;
@@ -117,6 +120,8 @@ tr:nth-child(even){
     position: relative;
     filter: opacity(0.95);
 }
+
+
 .buttonContainer a {
     width: 60%;
     height: 80%;
@@ -136,12 +141,16 @@ tr:nth-child(even){
     color: #f6cfd0;
     transition: all 0.5s ease;
 }
+
+
 .buttonContainer a:hover + img {
     filter: brightness(0.6);
     transition: all 0.5s ease;
     scale: 1.05;
     transition: opacity(0.5)
 }
+
+
 .buttonContainer img {
     position: absolute;
     width: 40%;
@@ -152,6 +161,7 @@ tr:nth-child(even){
     transition: all 0.5s ease;
 }
 
+
 footer {
     height: 5%;
     width: 100%;
@@ -159,11 +169,15 @@ footer {
     align-items: center;
     justify-content: center;
     background-color: black;
+    box-shadow: 0 0 35px black;
 }
+
+
 footer h6 {
-    font-family: 'Nunito Sans', Italic, sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     font-weight: 400;
     font-style: italic;
     font-size: 14px;
     color: #e81557;
 }
+
