@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Historial Medico</title>
+    <!-- Inclusión de la hoja de estilos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/main.css"/>
+    <!-- Icono de la página -->
+    <link rel="shortcut icon" href="../static/Logotipo.png">
+</head>
+<body class="image-background">
+<!-- Barra de navegación -->
+    <nav class="navBar">
+        <img
+            src="../static/assets/IsoLogotipo.png"
+            alt=""
+        >
+    </nav>
+
+    <!-- Barra decorativa superior -->
+    <div class="decorativeBarTop">
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 offset-md-4">
+                <!-- Título de la página -->
+                <h1 class="title-boxes fw-bold">Historial Médico</h1>
+
+                <!-- Formulario para crear registros -->
+                <form action="{% url 'crear_registros' %}" method="POST" class="card card-body bg-secondary">
+                    {% csrf_token %}
+                    <label for="nombre">Ingrese el nombre:</label>
+                    <input type="text" name="nombre" placeholder="Escribe un nombre" class="form-control mb-2">
+                    <label for="descripcion">Ingrese la observación:</label>
+                    <textarea name="descripcion" rows="5" placeholder="Escriba la observación" class="form-control mb-2"></textarea>
+                    <button class="btn btn-success">Guardar</button>
+                </form>
+
+                <!-- Verificación de existencia de registros -->
+                {% if registros %}
+                <div class="list-group">
+                    <!-- Tabla de registros -->
+                    <table class="table">
+                        <thead class="table-titles">
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body">
+                            <!-- Ciclo para mostrar los registros -->
+                            {% for Registro in registros %}
+                            <tr>
+                                <td>{{ Registro.nombre }}</td>
+                                <td>{{ Registro.descripcion }}</td>
+                                <td>
+                                    <!-- Formulario para editar el registro -->
+                                    <form action="{% url 'editar_registros' Registro.id %}" method="POST">
+                                        {% csrf_token %}
+                                        <button class="btn btn-warning">Editar</button>
+                                    </form>
+                                    <!-- Formulario para eliminar el registro -->
+                                    <form action="{% url 'eliminar_registros' Registro.id %}" method="POST">
+                                        {% csrf_token %}
+                                        <button class="btn btn-danger">Eliminar</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            {% empty %}
+                            <!-- Mensaje de "No hay historial" cuando no hay registros -->
+                            <tr>
+                                <td class="empty" colspan="3">No hay historial</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% else %}
+                <!-- Mensaje de "No hay historial" cuando no hay registros -->
+                <h1 class="text-light">No hay historial</h1>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <!-- Pie de página -->
+    <footer>
+        <h6>
+            Grupo Primates. Tecnicatura Universitaria en Programación UTN.
+            2023.
+        </h6>
+    </footer>
+</body>
+</html>
