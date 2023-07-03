@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <title>EditarRegistros</title>
+    <!-- Inclusión de la hoja de estilos de Bootstrap -->
+    <link rel="stylesheet" href="../static/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/main.css">
+    <link rel="stylesheet" type="text/css" href="../static/main.css">
+    <!-- Icono de la página -->
+    <link rel="shortcut icon" href="../static/assets/Logotipo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+
+</head>
+<body class="image-background">
+        <!-- Barra de navegación -->
+        <nav class="navBar">
+                <img
+                    src="../static/assets/IsoLogotipo-Head.png"
+                    alt=""
+                >
+            </nav>
+            <!-- Barra decorativa superior -->
+
+
+        <div class="container">
+          <div class="col-md-4 offset-md-4">
+              <!-- Título de la página -->
+            <h1 class="title-boxes fw-bold">Editar Diagnóstico</h1>
+
+              <!-- Formulario de edición -->
+            <form method="POST" class="card card-body bg-secondary">
+                {% csrf_token %}
+                {% for form in forms %}
+                <div class="card card-body bg-secondary mb-2">
+                    <label for="">{{ form.label }}</label>
+                    <input
+                    type="{{ form.field.widget.input_type }}"
+                    name="{{ form.name }}"
+                    id=""
+                    placeholder="{{ form.label }}"
+                    value="{{ form.value | default:'' }}"
+                    class="form-control mb-2"
+                    >
+                </div>
+
+                {% endfor %}
+
+                <!-- Botones de guardar y cancelar -->
+                <div class="main-form--edit_buttons">
+                    <input type="submit" value="Guardar" class="btn btn-success">
+                    <a href={% url 'registros' %} role="button" class="btn btn-danger mt-2">Cancelar</a>
+                </div>
+            </form>
+          </div>
+        </div>
+
+    <!-- Pie de página -->
+        <!-- Pie de página -->
+        <footer>
+            <h6>
+                Grupo Primates - Tecnicatura Universitaria en Programación UTN -
+                2023 ©
+            </h6>
+        </footer>
+  </body>
+</html>
